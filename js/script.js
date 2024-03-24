@@ -1,8 +1,8 @@
 const hiro = document.querySelector('.hiro')
-console.log(hiro);
 
 const title = document.createElement('h1')
 title.innerHTML = "Заголовок"
+title.classList.add('title-h1')
 
 hiro.append(title)
 
@@ -11,7 +11,7 @@ import { print } from "./function.js";
 print("jjj")
 
 
-//*******************************
+//************codewars*******************//
 function rep(s) {
   let res = []
   const gl = "aeiouAEIOU"
@@ -20,13 +20,13 @@ function rep(s) {
     gl.includes(char) ? res.push("!") : res.push(char)
 
   }
-  console.log(res.join(""));
+  // console.log(res.join(""));
 }
 rep("slon")
 
 function isItLetter(character) {
-  console.log(character.search(/[a-z]/i));
-  console.log(/[a-z]/i.test(character));
+  // console.log(character.search(/[a-z]/i));
+  // console.log(/[a-z]/i.test(character));
 }
 isItLetter("l")
 
@@ -53,7 +53,7 @@ function tacofy(word) {
     }
   }
   res.push("shell")
-  console.log(res);
+  //console.log(res);
 }
 tacofy("world")
 
@@ -61,7 +61,7 @@ tacofy("world")
 function findDup(arr) {
   arr.forEach((element, index) => {
     if (arr.includes(element, index + 1)) {
-      console.log(element);
+      //console.log(element);
     }
   });
 }
@@ -76,14 +76,14 @@ function planeSeat(a) {
     Number.isInteger(+char) ? num.push(char) : str.push(char)
   }
 
-  console.log(num.join(''), str.join(''));
+  //console.log(num.join(''), str.join(''));
   if (+num.join('') > 61) {
     return "No Seat!!"
   }
   if (+num.join('') < 21) {
     console.log(+num.join(''));
     result.push("Front")
-    console.log(result);
+    //console.log(result);
   }
   if (+num.join('') > 20 && +num.join('') < 41) {
     result.push("Middle")
@@ -92,7 +92,7 @@ function planeSeat(a) {
     result.push("Backe")
   }
 
-  console.log(alf.indexOf(str.join('').toLowerCase()));
+  // console.log(alf.indexOf(str.join('').toLowerCase()));
   if (alf.indexOf(str.join('').toLowerCase()) == -1) {
     return "No Seat!!"
   }
@@ -105,8 +105,8 @@ function planeSeat(a) {
   if (alf.indexOf(str.join('').toLowerCase()) < 9 && alf.indexOf(str.join('').toLowerCase()) > 5) {
     result.push("Right")
   }
-  console.log(result.join("-"));
+  //console.log(result.join("-"));
 
 }
-planeSeat('29K')
+planeSeat('29i')
 
