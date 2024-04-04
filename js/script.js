@@ -110,3 +110,28 @@ function planeSeat(a) {
 }
 planeSeat('29i')
 
+
+
+function validateWord(s) {
+  let arr = []
+  for (let char of s.toLowerCase()) {
+    arr.push(char)
+  }
+  arr = arr.sort()
+  console.log(arr);
+
+  for (const element of arr) {
+    console.log(element);
+  }
+
+
+
+  let arr1 = []
+  let arr2 = []
+  for (let index = 0; index < arr.length; index++) {
+    const element = arr[index];
+    index % 2 == 0 ? arr2.push(element) : arr1.push(element)
+  }
+  console.log(arr1.join() == arr2.join());
+}
+validateWord("126524")
