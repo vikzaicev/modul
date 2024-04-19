@@ -132,6 +132,21 @@ function validateWord(s) {
     const element = arr[index];
     index % 2 == 0 ? arr2.push(element) : arr1.push(element)
   }
-  console.log(arr1.join() == arr2.join());
+  // console.log(arr1.join() == arr2.join());
 }
-validateWord("126524")
+// validateWord("126524")
+
+
+function possiblyPerfect(key, answers) {
+  let res = []
+  for (let index = 0; index < key.length; index++) {
+    const element = key[index];
+
+    if (key[index] == answers[index] || key[index] == "_") {
+      console.log(element);
+      res.push(element)
+    }
+  }
+  console.log(res.length == key.length);
+}
+possiblyPerfect(["A", "_", "C", "_", "B"], ["A", "D", "C", "E", "B"])
