@@ -1512,4 +1512,37 @@ input {
 .footer__diskr {
   color: #8c96a0;
   text-align: center;
+}
+
+.title {
+  margin: 20px;
+  font-size: 30px;
+}
+
+.title-span {
+  position: relative;
+  color: #27c91f;
+}
+
+.title-span::after {
+  position: absolute;
+  content: "";
+  background-color: #27c91f;
+  width: 2px;
+  height: 25px;
+  top: 3px;
+  right: -5px;
+  animation: slidein 1s linear infinite;
+}
+
+@keyframes slidein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

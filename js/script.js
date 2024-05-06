@@ -10,6 +10,31 @@ hiro.append(title)
 import { print } from "./function.js";
 print("jjj")
 
+// **************печатает текст*****************//
+const title2 = document.querySelector('.title-span')
+
+const arrName = ['HTML', 'SCC', 'Javascript', 'React']
+let arrIndex = 0;
+let worldIndex = 0;
+
+const addText = () => {
+  let interval = setInterval(() => {
+    worldIndex++
+    title2.textContent = `${arrName[arrIndex].slice(0, worldIndex)}`
+    if (worldIndex == arrName[arrIndex].length) {
+      setTimeout(() => {
+        arrIndex++;
+        worldIndex = 0;
+        if (arrIndex == arrName.length) {
+          arrIndex = 0;
+        }
+      }, 1000);
+    }
+  }, 400);
+}
+
+addText()
+
 
 //************codewars*******************//
 function rep(s) {
@@ -149,4 +174,4 @@ function possiblyPerfect(key, answers) {
   }
   console.log(res.length == key.length);
 }
-possiblyPerfect(["A", "_", "C", "_", "B"], ["A", "D", "C", "E", "B"])
+// possiblyPerfect(["A", "_", "C", "_", "B"], ["A", "D", "C", "E", "B"])
